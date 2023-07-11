@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "a549d0f7-9df3-4cbd-93b9-0a73f1f76c1d",
+		"name": "Directus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"admin@example.com\",\n\t\"password\": \"d1r3ctu5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8055/auth/login",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8055",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get articles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhlMzFmNmY3LWRhMGUtNGIyMC05ZDk3LWFhYzY4OTM0NTUyNSIsInJvbGUiOiJiNGZjZDY3NS1mYTVlLTQ5NTQtOTc5Ny04MWE3MTY0MWJmOGIiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4OTAwNDc5NywiZXhwIjoxNjg5MDA1Njk3LCJpc3MiOiJkaXJlY3R1cyJ9.j34vDNO6279_lIDtO7I2OqePVdM8iYipqY8sTJjuklA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8055/items/articles",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8055",
+					"path": [
+						"items",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
